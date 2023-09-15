@@ -5,12 +5,7 @@ WORKDIR /app/
 
 RUN apt-get update -y \
     && apt-get install -y --no-install-recommends \
-        lsb-release \
-        gnupg \
         build-essential \
-        libpq-dev \
-        libsodium-dev \
-        libxrender1 \
         vim
     RUN gem install bundler
 ADD config.ru $project_dir
