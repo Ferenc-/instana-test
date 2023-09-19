@@ -6,7 +6,8 @@ WORKDIR /app/
 RUN apt-get update -y \
     && apt-get install -y --no-install-recommends \
         build-essential \
-        vim
+        vim \
+        git
     RUN gem install bundler
 ADD config.ru $project_dir
 ADD Gemfile $project_dir
