@@ -11,7 +11,6 @@ RUN apt-get update -y \
     RUN gem install bundler
 ADD config.ru $project_dir
 ADD Gemfile $project_dir
-ADD Gemfile.lock $project_dir
 
 RUN bundle install
 CMD ["rackup", "--host", "0.0.0.0", "-p", "80"]
